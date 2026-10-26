@@ -175,6 +175,8 @@ must additionally be tested on the target hardware. `v*` tags publish the matchi
 version to GHCR; main publishes `edge` (not recommended for stable deployment).
 Measured comparison: [benchmark results](benchmarks/RESULTS.md),
 [method and reproduction](benchmarks/README.md), and [raw results](benchmarks/results/).
-In this two-thread CPU deployment, GPU Whisper was faster and more accurate on
-these synthetic German recordings. Synthetic TTS tests are not evidence of real
-microphone, dialect or everyday performance.
+In the broader warm-operation comparison of this two-thread CPU deployment,
+GPU Whisper was faster and more accurate on these synthetic German recordings.
+Redux was faster from process restart to the first transcript in the separate,
+operator-approved cold-start follow-up. Synthetic TTS tests are not evidence of
+real microphone, dialect or everyday performance.

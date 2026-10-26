@@ -1,0 +1,7 @@
+{
+  "whisper_config_model_image_id_mounts_ports_unchanged": true,
+  "whisper_running_and_transcription_verified": true,
+  "whisper_restarts_authorized": true,
+  "guards_config_and_start_times_unchanged": true,
+  "all_three_health_endpoints_ok": true
+}

@@ -6,8 +6,9 @@ Nachtrag: Installiert ist inzwischen **0.1.1** mit vollständig eingefrorenen
 Debian-Abhängigkeiten ([Details](../DEPENDENCIES.md)), ohne Änderung am ASR-Modell
 oder an der Dekodierung. Die nachfolgenden Vergleichstabellen stammen weiterhin
 aus dem dokumentierten 0.1.0-Lauf; 0.1.1 wurde zusätzlich mit 41 Tests und 17
-Live-Protokollprüfungen verifiziert. Ein vollständiger **beidseitiger Kaltstart-
-Vergleich ist noch offen**: Der laufende Whisper-Dienst wurde nicht unterbrochen.
+Live-Protokollprüfungen verifiziert. Der aktuelle Testbestand umfasst 43 Tests.
+Der **beidseitige Prozess-Kaltstartvergleich ist inzwischen ergänzt**: Für Whisper
+hat der Betreiber anschließend ausdrücklich ein kurzes Wartungsfenster freigegeben.
 Redux funktioniert als ressourcensparende CPU-Alternative, ist in dieser
 Konfiguration aber weder schneller noch insgesamt genauer.
 
@@ -20,7 +21,9 @@ Konfiguration aber weder schneller noch insgesamt genauer.
   Vierkern-x86-Host mit AVX2, ohne AVX-512; nebenläufige Anwendungen blieben aktiv.
 - Whisper: bestehendes Faster-Whisper **large-v3-turbo**, CUDA **int8_float16**,
   Beam **3**, Sprache **de**; vorhandene NVIDIA-GPU und vorhandene HTTP-/Wyoming-
-  Dienste unverändert. Keine Whisper-Optimierung oder Neustarts für den Vergleich.
+  Dienste im Haupt-Warmvergleich unverändert. Keine Whisper-Optimierung.
+  Erst im gesondert freigegebenen Kaltstart-Nachtrag wurde ausschließlich der
+  Whisper-Container neu gestartet, ohne Modell-/Image-/Konfigurationsänderung.
 - 14 saubere Qwen3-TTS-Aufnahmen (13 Sohee, eine Serena), acht deterministische
   Rauschvarianten und eine Stillekontrolle. Drei Wiederholungen: **138 HTTP-Aufrufe**
   plus **36 zeitgetreu übertragene Wyoming-Aufnahmen**. Warmups separat, nicht mitgezählt.
@@ -51,28 +54,51 @@ Messungen je System). Wegen unterschiedlicher Dateilängen ist das kein sinnvoll
 P95-Wert für einzelne kurze Sprachbefehle; dort wird bei nur 18 Messungen bewusst
 kein belastbarer P95 behauptet. Min/Max, Einzelwerte und Warmups sind veröffentlicht.
 
-Ursprüngliche Redux-Neustartbereitschaft (0.1.0): **1,99 s**. Ergänzend wurden für
-**0.1.1 drei neue Modellprozesse jeweils bis zum ersten Transkript gemessen**:
+### Ergänzter Prozess-Kaltstartvergleich
 
-| Redux 0.1.1, gleicher kurzer Testbefehl | Median |
-|---|---:|
-| Neustart bis bereit | 2,002 s |
-| **Neustart bis erstes vollständiges Transkript** | **2,347 s** |
-| Erster HTTP-Transkriptionsaufruf nach Bereitschaft | 0,355 s |
-| Drei nachfolgende warme Aufrufe je Neustart (9 insgesamt) | 0,338 s |
+Je System **drei gemessene Container-/Modellprozess-Neustarts**, jeweils derselbe
+kurze Befehl `cmd01` (identischer WAV-SHA-256). Danach je drei warme Folgeaufrufe.
+Whisper wurde dafür nach **ausdrücklicher Wartungsfreigabe des Betreibers** neu
+gestartet; seine Bridge blieb durchgehend aktiv.
 
-Rohdaten: [cold-start-redux-0.1.1.json](results/cold-start-redux-0.1.1.json),
-Skript: [cold_start.py](cold_start.py). Dies sind Prozess-/Modell-Kaltstarts mit
-vorhandenem persistentem Modellcache; OS-Seitencaches wurden nicht global geleert.
-Die Zusatzmessung lief vom Docker-Host aus und nutzt nur `cmd01`, nicht den
-Windows-LAN-Messclient/alle sechs Befehle der Haupttabelle. Deshalb nicht direkt
-mit deren Medianen vermischen. Erste und warme Transkripte waren identisch.
+| Messung, Median | Redux 0.1.1 CPU | Bestehendes Whisper GPU |
+|---|---:|---:|
+| Neustart bis Bereitschaft* | 2,002 s | 9,307 s |
+| **Neustart bis erstes vollständiges Transkript** | **2,347 s** | **10,103 s** |
+| Erster HTTP-Aufruf nach Bereitschaft | **0,355 s** | 0,796 s |
+| Warme Folgeaufrufe nur für `cmd01` (9 je System) | **0,338 s** | 0,445 s |
 
-**Offen:** entsprechender Kaltstart von GPU-Whisper. Für eine zweite isolierte
-GPU-Kopie war bei der Prüfung nicht genügend freie Reserve vorhanden. Ein
-Neustart des laufenden Whisper-Dienstes oder eine bewusste Ausnahme dieses
-Vergleichsteils benötigt zuerst eine gesonderte Betreiberentscheidung. Es wird
-keine vollständige Kaltstart-Gegenüberstellung behauptet.
+*Redux: Modell geladen und HTTP bereit; Whisper: Wyoming-Protokoll antwortet
+auf `describe`. Protokollbereitschaft beweist bei Whisper nicht, dass alle
+Modellgewichte/Inferenz-Caches geladen sind. Deshalb ist vor allem die inklusive
+Zeit **bis zum ersten tatsächlichen Transkript** relevant; sie enthält auch
+Container-Initialisierung und gegebenenfalls verzögertes Modellladen.
+Bereich dieser Gesamtzeit: Redux **2,192–2,462 s**, Whisper **9,481–12,465 s**.
+Alle ersten und warmen Transkripte entsprachen dem Testbefehl.
+
+**Redux gewinnt diesen Kaltstartvergleich.** Das ist ein Vergleich der konkreten
+Dienste, kein isolierter Modell-Ladebenchmark. Er setzt die Aussage über den
+breiteren Warmvergleich nicht außer Kraft: Nur dieser eine kurze Befehl war auch
+in den warmen Folgeaufrufen des Nachtrags mit Redux schneller. Unterschiedliche
+Clientpositionen, Satzlängen und Hintergrundlast dürfen nicht vermischt werden.
+
+Rohdaten: [Redux](results/cold-start-redux-0.1.1.json),
+[Whisper](results/cold-start-whisper-final.json). Skripte:
+[cold_start.py](cold_start.py), [whisper_cold_start.py](whisper_cold_start.py).
+Beide Nachtragsserien liefen vom Docker-Host, aber zeitlich getrennt, nicht vom
+Windows-LAN-Client des Hauptvergleichs. Persistenter Modellcache und OS-Seitencache
+blieben erhalten; kein globales Cache-Leeren und kein kompletter Server-Kaltboot.
+
+Transparenz zum Ablauf: Eine erste Whisper-Serie mit drei Neustarts wurde wegen
+eines Fehlalarms im abschließenden Schutzvergleich wiederholt. Docker lieferte
+unveränderte Mounts in anderer Reihenfolge; kein anderer Dienst war verändert
+oder neu gestartet worden. Der Vergleich wurde korrigiert, mit zwei Regressionstests
+abgesichert und Messwerte werden jetzt nach jedem Durchlauf gespeichert. **Insgesamt
+sechs autorisierte Whisper-Neustarts**, davon drei in der oben ausgewerteten finalen
+Serie. Die fehlgeschlagene Vorserien-Abnahme wird nicht als bestandener Messlauf
+gezählt. Nach der finalen Serie wurden laufender Whisper, korrekte Transkription,
+unveränderte Konfigurationen/Ports und unveränderte Startzeiten aller anderen
+geschützten Dienste erneut bestätigt.
 
 ## Genauigkeit in diesem kleinen synthetischen Korpus
 
@@ -130,14 +156,16 @@ Dialekte, reale Mikrofone oder Namen.
 - Anonymer GHCR-Pull erfolgreich; Healthcheck gesund; eigener Neustart und
   Cache-Wiederverwendung geprüft. CPU-only-Build, nicht privilegiert, Benutzer
   99:100, read-only Root-Dateisystem und begrenzter temporärer Speicher.
-- **39 Python-Tests** (inklusive Benchmark-/Dateiintegrität), **5 native Tests** und **17 Live-Prüfungen** erfolgreich.
+- **43 Python-Tests** (inklusive Benchmark-/Dateiintegrität und Mountvergleich), **5 native Tests** und **17 Live-Prüfungen** erfolgreich.
   Live-Prüfung umfasst Discovery, echte Audio-Chunks, 8/16/24/48 kHz,
   Mono/Stereo, zwei Aufnahmen pro Verbindung, fehlerhafte Eingaben,
   Wiederverbindung, Verbindungsabbruch während nativer Inferenz mit Erholung
   und Überlastablehnung. Keine Teilergebnisse vor `audio-stop`.
-- HA-Konfiguration, vorhandene Whisper-/TTS-Container, deren Konfigurationen,
-  Ports und Startzeitpunkte blieben unverändert. Keine Community-Applications-
-  Einreichung und kein Whisper-Portwechsel.
+- HA-Konfiguration sowie vorhandene Container-Identitäten, Images, Modelle,
+  Konfigurationen und Ports blieben unverändert. Einzige spätere Ausnahme am
+  Betriebszustand: die ausdrücklich genehmigten Whisper-Neustarts für die
+  Kaltstartmessung. TTS, Frigate, HA, Bridge und Redux wurden dabei nicht neu
+  gestartet. Keine Community-Applications-Einreichung und kein Whisper-Portwechsel.
 
 ## Entscheidung und spätere Wechseloption
 

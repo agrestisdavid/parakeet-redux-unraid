@@ -82,5 +82,11 @@ The pilot remains available and is not silently rewritten.
   intent/action execution test; no home devices were controlled.
 - All zero-audio silence control runs bypass HA's VAD intentionally and are excluded
   from WER/CER. Noise is synthetic stationary noise, not real competing speech.
-- Cold/restart readiness is measured only for the new Redux app. Existing Whisper
-  was never restarted, so no comparative Whisper cold-start claim is made.
+- A separate, operator-approved maintenance follow-up now measures both systems'
+  process-cold restart-to-first-transcript latency: three final cycles per system,
+  followed by three warm requests each, same `cmd01` WAV and Docker-host client.
+  Model/disk and OS caches were retained. Whisper's `describe` readiness is not
+  assumed to mean fully loaded weights. See RESULTS.md for inclusive timings,
+  limitations and the repeated preliminary series caused by a mount-order guard
+  false positive. Only Whisper was restarted during its approved maintenance;
+  its config/image/model/ports and all other protected services stayed unchanged.

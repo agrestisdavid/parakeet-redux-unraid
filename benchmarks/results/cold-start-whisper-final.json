@@ -1,0 +1,82 @@
+{
+  "method": "Operator-approved maintenance: three existing GPU Whisper process restarts, same fixture as Redux. No model/config/image/port changes. Bridge and guard services not restarted. Model disk and OS caches retained. Protocol readiness is not asserted to mean model weights already loaded.",
+  "audio_sha256": "4366c24acd541dea6d7c39fefee631ebf360d163bbb17f0269bdb19d0ce9cdf5",
+  "runs": [
+    {
+      "restart_to_protocol_ready_seconds": 11.452179849147797,
+      "restart_to_first_transcript_seconds": 12.465411553159356,
+      "first_request": {
+        "seconds": 1.0129346027970314,
+        "text": "Schalte das Licht in der Küche ein."
+      },
+      "warm_requests": [
+        {
+          "seconds": 0.4198264926671982,
+          "text": "Schalte das Licht in der Küche ein."
+        },
+        {
+          "seconds": 0.4657027702778578,
+          "text": "Schalte das Licht in der Küche ein."
+        },
+        {
+          "seconds": 0.452582661062479,
+          "text": "Schalte das Licht in der Küche ein."
+        }
+      ]
+    },
+    {
+      "restart_to_protocol_ready_seconds": 9.306813651695848,
+      "restart_to_first_transcript_seconds": 10.103120286017656,
+      "first_request": {
+        "seconds": 0.7962484657764435,
+        "text": "Schalte das Licht in der Küche ein."
+      },
+      "warm_requests": [
+        {
+          "seconds": 0.42167333140969276,
+          "text": "Schalte das Licht in der Küche ein."
+        },
+        {
+          "seconds": 0.444939324632287,
+          "text": "Schalte das Licht in der Küche ein."
+        },
+        {
+          "seconds": 0.4467782750725746,
+          "text": "Schalte das Licht in der Küche ein."
+        }
+      ]
+    },
+    {
+      "restart_to_protocol_ready_seconds": 8.76383283548057,
+      "restart_to_first_transcript_seconds": 9.480661354959011,
+      "first_request": {
+        "seconds": 0.7167794369161129,
+        "text": "Schalte das Licht in der Küche ein."
+      },
+      "warm_requests": [
+        {
+          "seconds": 0.43508229963481426,
+          "text": "Schalte das Licht in der Küche ein."
+        },
+        {
+          "seconds": 0.4499637149274349,
+          "text": "Schalte das Licht in der Küche ein."
+        },
+        {
+          "seconds": 0.38612542673945427,
+          "text": "Schalte das Licht in der Küche ein."
+        }
+      ]
+    }
+  ],
+  "median_restart_to_protocol_ready_seconds": 9.306813651695848,
+  "median_restart_to_first_transcript_seconds": 10.103120286017656,
+  "median_first_request_seconds": 0.7962484657764435,
+  "median_warm_request_seconds": 0.444939324632287,
+  "verification": {
+    "whisper_running": true,
+    "whisper_config_image_identity_unchanged": true,
+    "whisper_restart_authorized": true,
+    "all_guard_configs_and_start_times_unchanged": true
+  }
+}
