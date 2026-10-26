@@ -1,6 +1,13 @@
 # Ergebnis: Redux CPU versus bestehendes GPU-Whisper
 
 **Messdatum: 26. Oktober 2026. Empfehlung für dieses Deployment: Whisper behalten.**
+
+Nachtrag: Installiert ist inzwischen **0.1.1** mit vollständig eingefrorenen
+Debian-Abhängigkeiten ([Details](../DEPENDENCIES.md)), ohne Änderung am ASR-Modell
+oder an der Dekodierung. Die nachfolgenden Vergleichstabellen stammen weiterhin
+aus dem dokumentierten 0.1.0-Lauf; 0.1.1 wurde zusätzlich mit 41 Tests und 17
+Live-Protokollprüfungen verifiziert. Ein vollständiger **beidseitiger Kaltstart-
+Vergleich ist noch offen**: Der laufende Whisper-Dienst wurde nicht unterbrochen.
 Redux funktioniert als ressourcensparende CPU-Alternative, ist in dieser
 Konfiguration aber weder schneller noch insgesamt genauer.
 
@@ -44,9 +51,28 @@ Messungen je System). Wegen unterschiedlicher Dateilängen ist das kein sinnvoll
 P95-Wert für einzelne kurze Sprachbefehle; dort wird bei nur 18 Messungen bewusst
 kein belastbarer P95 behauptet. Min/Max, Einzelwerte und Warmups sind veröffentlicht.
 
-Neustart der neuen Redux-App mit vorhandenem Modellcache: **1,99 s bis HTTP bereit**.
-Das ist kein Erstdownload-Benchmark und kein kalter RAM-/Dateisystemcache-Test.
-Whisper wurde nicht neu gestartet; dessen Kaltstart wurde deshalb nicht verglichen.
+Ursprüngliche Redux-Neustartbereitschaft (0.1.0): **1,99 s**. Ergänzend wurden für
+**0.1.1 drei neue Modellprozesse jeweils bis zum ersten Transkript gemessen**:
+
+| Redux 0.1.1, gleicher kurzer Testbefehl | Median |
+|---|---:|
+| Neustart bis bereit | 2,002 s |
+| **Neustart bis erstes vollständiges Transkript** | **2,347 s** |
+| Erster HTTP-Transkriptionsaufruf nach Bereitschaft | 0,355 s |
+| Drei nachfolgende warme Aufrufe je Neustart (9 insgesamt) | 0,338 s |
+
+Rohdaten: [cold-start-redux-0.1.1.json](results/cold-start-redux-0.1.1.json),
+Skript: [cold_start.py](cold_start.py). Dies sind Prozess-/Modell-Kaltstarts mit
+vorhandenem persistentem Modellcache; OS-Seitencaches wurden nicht global geleert.
+Die Zusatzmessung lief vom Docker-Host aus und nutzt nur `cmd01`, nicht den
+Windows-LAN-Messclient/alle sechs Befehle der Haupttabelle. Deshalb nicht direkt
+mit deren Medianen vermischen. Erste und warme Transkripte waren identisch.
+
+**Offen:** entsprechender Kaltstart von GPU-Whisper. Für eine zweite isolierte
+GPU-Kopie war bei der Prüfung nicht genügend freie Reserve vorhanden. Ein
+Neustart des laufenden Whisper-Dienstes oder eine bewusste Ausnahme dieses
+Vergleichsteils benötigt zuerst eine gesonderte Betreiberentscheidung. Es wird
+keine vollständige Kaltstart-Gegenüberstellung behauptet.
 
 ## Genauigkeit in diesem kleinen synthetischen Korpus
 

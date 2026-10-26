@@ -1,0 +1,92 @@
+{
+  "method": "Three independent container/model-process restarts. Persistent disk model cache and OS page cache retained. No system cache flush. Only new Redux app restarted.",
+  "image": "ghcr.io/agrestisdavid/parakeet-redux-unraid@sha256:4152d1ed2cc7b82cc962e6303ebaaac57dca6e7f7faae124700ee1f23fcaaef7",
+  "audio_sha256": "4366c24acd541dea6d7c39fefee631ebf360d163bbb17f0269bdb19d0ce9cdf5",
+  "runs": [
+    {
+      "version": "0.1.1",
+      "restart_to_ready_seconds": 2.001983117312193,
+      "restart_to_first_transcript_seconds": 2.3472190089523792,
+      "first_request": {
+        "seconds": 0.34517374262213707,
+        "inference_seconds": 0.25956165976822376,
+        "text": "schalte das Licht in der Küche ein"
+      },
+      "warm_requests": [
+        {
+          "seconds": 0.3255680203437805,
+          "inference_seconds": 0.2582858186215162,
+          "text": "schalte das Licht in der Küche ein"
+        },
+        {
+          "seconds": 0.34320908039808273,
+          "inference_seconds": 0.27081994339823723,
+          "text": "schalte das Licht in der Küche ein"
+        },
+        {
+          "seconds": 0.3456459604203701,
+          "inference_seconds": 0.2826850675046444,
+          "text": "schalte das Licht in der Küche ein"
+        }
+      ]
+    },
+    {
+      "version": "0.1.1",
+      "restart_to_ready_seconds": 1.8364842683076859,
+      "restart_to_first_transcript_seconds": 2.191712023690343,
+      "first_request": {
+        "seconds": 0.3551623299717903,
+        "inference_seconds": 0.28181243874132633,
+        "text": "schalte das Licht in der Küche ein"
+      },
+      "warm_requests": [
+        {
+          "seconds": 0.30193248949944973,
+          "inference_seconds": 0.23496230691671371,
+          "text": "schalte das Licht in der Küche ein"
+        },
+        {
+          "seconds": 0.30770499259233475,
+          "inference_seconds": 0.23828558810055256,
+          "text": "schalte das Licht in der Küche ein"
+        },
+        {
+          "seconds": 0.3375347200781107,
+          "inference_seconds": 0.2612625826150179,
+          "text": "schalte das Licht in der Küche ein"
+        }
+      ]
+    },
+    {
+      "version": "0.1.1",
+      "restart_to_ready_seconds": 2.102179581299424,
+      "restart_to_first_transcript_seconds": 2.461802864447236,
+      "first_request": {
+        "seconds": 0.3595577608793974,
+        "inference_seconds": 0.2782356720417738,
+        "text": "schalte das Licht in der Küche ein"
+      },
+      "warm_requests": [
+        {
+          "seconds": 0.30288273841142654,
+          "inference_seconds": 0.23509038239717484,
+          "text": "schalte das Licht in der Küche ein"
+        },
+        {
+          "seconds": 0.37543707340955734,
+          "inference_seconds": 0.31151135824620724,
+          "text": "schalte das Licht in der Küche ein"
+        },
+        {
+          "seconds": 0.368287768214941,
+          "inference_seconds": 0.3009653650224209,
+          "text": "schalte das Licht in der Küche ein"
+        }
+      ]
+    }
+  ],
+  "median_restart_to_ready_seconds": 2.001983117312193,
+  "median_restart_to_first_transcript_seconds": 2.3472190089523792,
+  "median_first_request_seconds": 0.3551623299717903,
+  "median_warm_request_seconds": 0.3375347200781107
+}
