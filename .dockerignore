@@ -1,0 +1,9 @@
+*
+!Dockerfile
+!requirements.lock
+!LICENSE
+!NOTICE.md
+!native/
+!native/thread_control.cpp
+!redux/
+!redux/*.py

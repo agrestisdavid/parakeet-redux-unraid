@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Container version="2">
+  <Name>Parakeet-Redux</Name>
+  <Repository>ghcr.io/agrestisdavid/parakeet-redux-unraid:0.1.0</Repository>
+  <Registry>https://github.com/agrestisdavid/parakeet-redux-unraid/pkgs/container/parakeet-redux-unraid</Registry>
+  <Network>bridge</Network>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/agrestisdavid/parakeet-redux-unraid/issues</Support>
+  <Project>https://github.com/agrestisdavid/parakeet-redux-unraid</Project>
+  <Overview>Local multilingual speech recognition using Moondream Parakeet Redux on CPU (parakeet.cpp, packed GGUF). Includes OpenAI-style HTTP transcription and Wyoming for Home Assistant. Accepts streaming audio chunks; returns final text after audio-stop, NOT incremental text. Linux amd64 AVX2 CPU required; no GPU. First start downloads and verifies a 213 MB CC-BY-4.0 model. Independent integration, not an official Moondream app. Not submitted to Community Applications. New ports do not replace existing Whisper. Keep on a trusted LAN; Wyoming is unauthenticated.</Overview>
+  <Category>HomeAutomation: Productivity:</Category>
+  <WebUI>http://[IP]:[PORT:8080]/health</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/agrestisdavid/parakeet-redux-unraid/main/unraid/parakeet-redux.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/agrestisdavid/parakeet-redux-unraid/main/assets/icon.svg</Icon>
+  <ExtraParams>--cpus=2 --memory=3g --pids-limit=256 --cap-drop=ALL --security-opt=no-new-privileges --read-only --tmpfs /tmp:rw,nosuid,nodev,noexec,size=256m --log-opt max-size=10m --log-opt max-file=3 --stop-timeout=20</ExtraParams>
+  <Config Name="HTTP port" Target="8080" Default="10320" Mode="tcp" Description="HTTP transcription API. Do not use your existing Whisper port." Type="Port" Display="always" Required="true" Mask="false">10320</Config>
+  <Config Name="Wyoming port" Target="10300" Default="10330" Mode="tcp" Description="Home Assistant Wyoming protocol. No TLS/auth; trusted LAN only." Type="Port" Display="always" Required="true" Mask="false">10330</Config>
+  <Config Name="Appdata" Target="/data" Default="/mnt/user/appdata/parakeet-redux" Mode="rw" Description="Persistent model cache. Directory must be writable by Unraid nobody:users (99:100)." Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/parakeet-redux</Config>
+  <Config Name="CPU threads" Target="CPU_THREADS" Default="2" Mode="" Description="Native inference threads. Default two; adjust CPU quota in Extra Parameters if increasing." Type="Variable" Display="always" Required="true" Mask="false">2</Config>
+  <Config Name="Maximum audio seconds" Target="MAX_AUDIO_SECONDS" Default="180" Mode="" Description="Maximum utterance/file length (1–600 seconds). Long recordings are segmented internally." Type="Variable" Display="always" Required="true" Mask="false">180</Config>
+  <Config Name="Inference timeout" Target="INFERENCE_TIMEOUT" Default="120" Mode="" Description="Worker timeout in seconds (1–600); a stuck worker is restarted." Type="Variable" Display="advanced" Required="true" Mask="false">120</Config>
+  <Config Name="HTTP API key" Target="API_KEY" Default="" Mode="" Description="Optional HTTP bearer token for /v1 routes only. Does NOT secure Wyoming. Never expose either port to the internet." Type="Variable" Display="advanced" Required="false" Mask="true"></Config>
+</Container>
