@@ -1,0 +1,404 @@
+[
+  {
+    "id": "cmd01",
+    "kind": "command",
+    "text": "Schalte das Licht in der Küche ein.",
+    "slots": [
+      "licht",
+      "küche",
+      "ein"
+    ],
+    "file": "cmd01.wav",
+    "duration": 2.84,
+    "sample_rate": 24000,
+    "rms": 0.022757952367971564,
+    "peak": 0.181854248046875,
+    "clipped_fraction": 0.0,
+    "sha256": "4366c24acd541dea6d7c39fefee631ebf360d163bbb17f0269bdb19d0ce9cdf5",
+    "condition": "clean"
+  },
+  {
+    "id": "cmd02",
+    "kind": "command",
+    "text": "Schalte die Stehlampe im Wohnzimmer aus.",
+    "slots": [
+      "stehlampe",
+      "wohnzimmer",
+      "aus"
+    ],
+    "file": "cmd02.wav",
+    "duration": 3.17,
+    "sample_rate": 24000,
+    "rms": 0.06958211750609579,
+    "peak": 0.347869873046875,
+    "clipped_fraction": 0.0,
+    "sha256": "e2dea09f1e260ca4122fdda8000c424d8e330ebc27eb1e9c901b92e5484e11ac",
+    "condition": "clean"
+  },
+  {
+    "id": "cmd03",
+    "kind": "command",
+    "text": "Stelle die Heizung im Schlafzimmer auf einundzwanzig Grad.",
+    "slots": [
+      "heizung",
+      "schlafzimmer",
+      "einundzwanzig",
+      "grad"
+    ],
+    "file": "cmd03.wav",
+    "duration": 4.28,
+    "sample_rate": 24000,
+    "rms": 0.04163884570867379,
+    "peak": 0.277069091796875,
+    "clipped_fraction": 0.0,
+    "sha256": "3af9693184114635c20bac27c4223a596ed1301f71980e0ebfc0344245d6cf0e",
+    "condition": "clean"
+  },
+  {
+    "id": "cmd04",
+    "kind": "command",
+    "text": "Dimme das Licht im Esszimmer auf fünfzig Prozent.",
+    "slots": [
+      "licht",
+      "esszimmer",
+      "fünfzig",
+      "prozent"
+    ],
+    "file": "cmd04.wav",
+    "duration": 3.72,
+    "sample_rate": 24000,
+    "rms": 0.0475857240793632,
+    "peak": 0.296844482421875,
+    "clipped_fraction": 0.0,
+    "sha256": "3658d6e50ac8930a47004f7bc464db15d3fa12afd1d4ac0c3340297289619bdf",
+    "condition": "clean"
+  },
+  {
+    "id": "cmd05",
+    "kind": "command",
+    "text": "Öffne die Rollläden im Arbeitszimmer.",
+    "slots": [
+      "öffne",
+      "rollläden",
+      "arbeitszimmer"
+    ],
+    "tts_options": {
+      "voice": "serena",
+      "seed": 0
+    },
+    "file": "cmd05.wav",
+    "duration": 2.76,
+    "sample_rate": 24000,
+    "rms": 0.05114929989888243,
+    "peak": 0.289764404296875,
+    "clipped_fraction": 0.0,
+    "sha256": "fe2de2e6e70e854c38e6ad32c4807697a22ba7232f4ef85e58d9e8daa43b2700",
+    "condition": "clean"
+  },
+  {
+    "id": "cmd06",
+    "kind": "command",
+    "text": "Stelle einen Timer auf sieben Minuten und dreißig Sekunden.",
+    "slots": [
+      "timer",
+      "sieben",
+      "minuten",
+      "dreißig",
+      "sekunden"
+    ],
+    "file": "cmd06.wav",
+    "duration": 4.45,
+    "sample_rate": 24000,
+    "rms": 0.046570977609842884,
+    "peak": 0.385955810546875,
+    "clipped_fraction": 0.0,
+    "sha256": "6670b18872b8c1af6f1f6558f0ff1352ec2cea2198ae37df6abd90d08775e84f",
+    "condition": "clean"
+  },
+  {
+    "id": "num01",
+    "kind": "numbers",
+    "text": "Der Termin ist morgen um achtzehn Uhr dreißig. Die Temperatur beträgt zweiundzwanzig Komma fünf Grad.",
+    "slots": [
+      "achtzehn uhr dreißig",
+      "zweiundzwanzig komma fünf"
+    ],
+    "file": "num01.wav",
+    "duration": 6.37,
+    "sample_rate": 24000,
+    "rms": 0.03840838850106775,
+    "peak": 0.281463623046875,
+    "clipped_fraction": 0.0,
+    "sha256": "761790e50dbdbbef186c2e03fa42e7169c3016663294fcbc0b3d1a69b5760337",
+    "condition": "clean"
+  },
+  {
+    "id": "num02",
+    "kind": "numbers",
+    "text": "Bitte bestelle zwölf Schrauben, vier Muttern und drei Unterlegscheiben. Der Gesamtpreis beträgt vierundzwanzig Euro.",
+    "slots": [
+      "zwölf",
+      "vier",
+      "drei",
+      "vierundzwanzig"
+    ],
+    "file": "num02.wav",
+    "duration": 8.28,
+    "sample_rate": 24000,
+    "rms": 0.05028090545757261,
+    "peak": 0.475555419921875,
+    "clipped_fraction": 0.0,
+    "sha256": "f7f7f44fd0b5bba2858e838d3310218f5b674f3ab541bcafa7d49d2b00bd1b4a",
+    "condition": "clean"
+  },
+  {
+    "id": "name01",
+    "kind": "names",
+    "text": "Bitte erinnere mich daran, Sabine Müller in Düsseldorf anzurufen.",
+    "slots": [
+      "sabine müller",
+      "düsseldorf"
+    ],
+    "file": "name01.wav",
+    "duration": 4.45,
+    "sample_rate": 24000,
+    "rms": 0.051532544364515084,
+    "peak": 0.371307373046875,
+    "clipped_fraction": 0.0,
+    "sha256": "c3d3b8fe2da975376b2d57f1e218f1c474314284bed2b2b6920902c36ac9c063",
+    "condition": "clean"
+  },
+  {
+    "id": "name02",
+    "kind": "names",
+    "text": "Die Lieferung für Jürgen Schneider geht nach München in die Bahnhofstraße.",
+    "slots": [
+      "jürgen schneider",
+      "münchen",
+      "bahnhofstraße"
+    ],
+    "file": "name02.wav",
+    "duration": 4.45,
+    "sample_rate": 24000,
+    "rms": 0.04904726512421941,
+    "peak": 0.302947998046875,
+    "clipped_fraction": 0.0,
+    "sha256": "8ba0297906d3e9d2e7bb4d3f3d13c7853bb75ad22a44dfe190d76c19feba28f8",
+    "condition": "clean"
+  },
+  {
+    "id": "dict01",
+    "kind": "dictation",
+    "text": "Heute habe ich die Unterlagen geprüft. Einige Angaben fehlen noch, deshalb schicke ich dir morgen eine ergänzte Fassung. Bitte ändere bis dahin nichts an der vorhandenen Planung.",
+    "file": "dict01.wav",
+    "duration": 10.44,
+    "sample_rate": 24000,
+    "rms": 0.05822716673552293,
+    "peak": 0.393280029296875,
+    "clipped_fraction": 0.0,
+    "sha256": "4088e40f94a54359a0557fd96d44804963077c16ddb52bccadb9ba0f13570f75",
+    "condition": "clean"
+  },
+  {
+    "id": "dict02",
+    "kind": "dictation",
+    "text": "Wenn das Fenster geöffnet ist, soll die Heizung ausgeschaltet bleiben. Sobald es wieder geschlossen wird, darf die vorherige Temperatur eingestellt werden. Das Licht soll davon unabhängig bleiben.",
+    "file": "dict02.wav",
+    "duration": 13.4,
+    "sample_rate": 24000,
+    "rms": 0.07067724997005292,
+    "peak": 0.557586669921875,
+    "clipped_fraction": 0.0,
+    "sha256": "232a7cc57c3ada9530793e7095db90db68d282732f01ac4554f393e5e5600739",
+    "condition": "clean"
+  },
+  {
+    "id": "long01",
+    "kind": "long",
+    "text": "Für unseren nächsten Ausflug müssen wir noch ein paar Dinge vorbereiten. Zuerst prüfen wir am Freitag den Wetterbericht und entscheiden, ob wir mit dem Zug oder mit dem Auto fahren. Bei Regen nehmen wir zusätzlich feste Schuhe und warme Jacken mit. Am Samstag treffen wir uns nach dem Frühstück am Bahnhof. Jeder bringt etwas zu trinken mit, und die belegten Brote verteilen wir auf zwei Rucksäcke. Unterwegs möchten wir eine längere Pause an einem ruhigen Platz machen. Wenn jemand früher zurückfahren möchte, kann er den Zug am Nachmittag nehmen. Die anderen bleiben bis zum Abend und gehen gemeinsam essen. Wichtig ist nur, dass wir uns rechtzeitig Bescheid sagen und niemand allein am Treffpunkt wartet.",
+    "file": "long01.wav",
+    "duration": 46.84,
+    "sample_rate": 24000,
+    "rms": 0.03350320235539158,
+    "peak": 0.414520263671875,
+    "clipped_fraction": 0.0,
+    "sha256": "1de0bf265e4b920e4cb34430062054307bbce16595596265e53c3d17c014827d",
+    "condition": "clean"
+  },
+  {
+    "id": "long02",
+    "kind": "long",
+    "text": "Beim Einrichten einer Sprachsteuerung kommt es nicht nur auf eine schnelle Antwort an. Das System muss auch verstehen, welches Gerät gemeint ist und welche Änderung gewünscht wird. Ein kurzer Befehl kann leicht missverstanden werden, wenn im Hintergrund Musik läuft oder mehrere Personen gleichzeitig sprechen. Deshalb sollten wir zuerst einfache Sätze in einem ruhigen Raum testen. Danach können wir die gleichen Aufnahmen mit zusätzlichen Geräuschen vergleichen. Die Einstellungen müssen während dieser Messung unverändert bleiben. Außerdem ist es wichtig, die Zeit nach dem Ende des gesprochenen Satzes zu messen. Eine hohe Verarbeitungsgeschwindigkeit allein sagt noch nicht, wie lange ein Mensch auf die Antwort wartet. Zum Schluss betrachten wir die erkannten Wörter und prüfen besonders die Zahlen, Namen und Verneinungen.",
+    "tts_options": {
+      "max_segment_chars": 250
+    },
+    "file": "long02.wav",
+    "duration": 54.64,
+    "sample_rate": 24000,
+    "rms": 0.05032190534535514,
+    "peak": 0.577606201171875,
+    "clipped_fraction": 0.0,
+    "sha256": "3e558c025eef895c196725086dde2a44efb6e205454920c883b4fae13f28aecc",
+    "condition": "clean"
+  },
+  {
+    "id": "cmd01_noise10",
+    "kind": "command",
+    "text": "Schalte das Licht in der Küche ein.",
+    "slots": [
+      "licht",
+      "küche",
+      "ein"
+    ],
+    "file": "cmd01_noise10.wav",
+    "duration": 2.84,
+    "sample_rate": 24000,
+    "rms": 0.022757952367971564,
+    "peak": 0.181854248046875,
+    "clipped_fraction": 0.0,
+    "sha256": "b869699e61bc969a89b6fb5b58a58dcf8572a9263aad5dfdeebe805fbff87a13",
+    "condition": "noise_10dB",
+    "noise_seed": 20261026,
+    "snr_reference": "RMS of speech samples with abs>0.01"
+  },
+  {
+    "id": "cmd01_noise0",
+    "kind": "command",
+    "text": "Schalte das Licht in der Küche ein.",
+    "slots": [
+      "licht",
+      "küche",
+      "ein"
+    ],
+    "file": "cmd01_noise0.wav",
+    "duration": 2.84,
+    "sample_rate": 24000,
+    "rms": 0.022757952367971564,
+    "peak": 0.181854248046875,
+    "clipped_fraction": 0.0,
+    "sha256": "18e6ba69bfb8e55e168fb180f5ca8c10df3b4e10acdc178f5b7d0d68b8fc03d0",
+    "condition": "noise_0dB",
+    "noise_seed": 20261026,
+    "snr_reference": "RMS of speech samples with abs>0.01"
+  },
+  {
+    "id": "cmd03_noise10",
+    "kind": "command",
+    "text": "Stelle die Heizung im Schlafzimmer auf einundzwanzig Grad.",
+    "slots": [
+      "heizung",
+      "schlafzimmer",
+      "einundzwanzig",
+      "grad"
+    ],
+    "file": "cmd03_noise10.wav",
+    "duration": 4.28,
+    "sample_rate": 24000,
+    "rms": 0.04163884570867379,
+    "peak": 0.277069091796875,
+    "clipped_fraction": 0.0,
+    "sha256": "361f1370c07f0495f4ff54ab694431f6a24e842a635baaf895b623d9a79a78b6",
+    "condition": "noise_10dB",
+    "noise_seed": 20261026,
+    "snr_reference": "RMS of speech samples with abs>0.01"
+  },
+  {
+    "id": "cmd03_noise0",
+    "kind": "command",
+    "text": "Stelle die Heizung im Schlafzimmer auf einundzwanzig Grad.",
+    "slots": [
+      "heizung",
+      "schlafzimmer",
+      "einundzwanzig",
+      "grad"
+    ],
+    "file": "cmd03_noise0.wav",
+    "duration": 4.28,
+    "sample_rate": 24000,
+    "rms": 0.04163884570867379,
+    "peak": 0.277069091796875,
+    "clipped_fraction": 0.0,
+    "sha256": "25bebe3f98a9e34dcada45610c27ce10717ff73348d82db9dd8a2607e8629a42",
+    "condition": "noise_0dB",
+    "noise_seed": 20261026,
+    "snr_reference": "RMS of speech samples with abs>0.01"
+  },
+  {
+    "id": "name01_noise10",
+    "kind": "names",
+    "text": "Bitte erinnere mich daran, Sabine Müller in Düsseldorf anzurufen.",
+    "slots": [
+      "sabine müller",
+      "düsseldorf"
+    ],
+    "file": "name01_noise10.wav",
+    "duration": 4.45,
+    "sample_rate": 24000,
+    "rms": 0.051532544364515084,
+    "peak": 0.371307373046875,
+    "clipped_fraction": 0.0,
+    "sha256": "7a077413408d5551c742e1b886bb05252dbd5e5e0477c28696e5f6992306f33d",
+    "condition": "noise_10dB",
+    "noise_seed": 20261026,
+    "snr_reference": "RMS of speech samples with abs>0.01"
+  },
+  {
+    "id": "name01_noise0",
+    "kind": "names",
+    "text": "Bitte erinnere mich daran, Sabine Müller in Düsseldorf anzurufen.",
+    "slots": [
+      "sabine müller",
+      "düsseldorf"
+    ],
+    "file": "name01_noise0.wav",
+    "duration": 4.45,
+    "sample_rate": 24000,
+    "rms": 0.051532544364515084,
+    "peak": 0.371307373046875,
+    "clipped_fraction": 0.0,
+    "sha256": "c472d7bab47b3b03e96db829d380062ac3f9a391a1591e15f8f84fe8ce10a337",
+    "condition": "noise_0dB",
+    "noise_seed": 20261026,
+    "snr_reference": "RMS of speech samples with abs>0.01"
+  },
+  {
+    "id": "dict01_noise10",
+    "kind": "dictation",
+    "text": "Heute habe ich die Unterlagen geprüft. Einige Angaben fehlen noch, deshalb schicke ich dir morgen eine ergänzte Fassung. Bitte ändere bis dahin nichts an der vorhandenen Planung.",
+    "file": "dict01_noise10.wav",
+    "duration": 10.44,
+    "sample_rate": 24000,
+    "rms": 0.05822716673552293,
+    "peak": 0.393280029296875,
+    "clipped_fraction": 0.0,
+    "sha256": "92c4e07427ca11785face19cb3ba19fcc5f02363705b8704e9b89e9076722398",
+    "condition": "noise_10dB",
+    "noise_seed": 20261026,
+    "snr_reference": "RMS of speech samples with abs>0.01"
+  },
+  {
+    "id": "dict01_noise0",
+    "kind": "dictation",
+    "text": "Heute habe ich die Unterlagen geprüft. Einige Angaben fehlen noch, deshalb schicke ich dir morgen eine ergänzte Fassung. Bitte ändere bis dahin nichts an der vorhandenen Planung.",
+    "file": "dict01_noise0.wav",
+    "duration": 10.44,
+    "sample_rate": 24000,
+    "rms": 0.05822716673552293,
+    "peak": 0.393280029296875,
+    "clipped_fraction": 0.0,
+    "sha256": "a9df14e2d1fda29e9affda1ac563d17420c4f029fc749f8f1dc4be92a1a7b573",
+    "condition": "noise_0dB",
+    "noise_seed": 20261026,
+    "snr_reference": "RMS of speech samples with abs>0.01"
+  },
+  {
+    "id": "silence",
+    "kind": "control",
+    "text": "",
+    "file": "silence.wav",
+    "duration": 3,
+    "sample_rate": 24000,
+    "condition": "silence",
+    "sha256": "cb285321577f2cae96d045a03703d8dab14a24b2d1ac8a931dfcbb35f46a1f94"
+  }
+]

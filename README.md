@@ -159,7 +159,7 @@ Python 3.12 (Wyoming's audioop dependency is deprecated in newer Python):
 python -m venv .venv
 . .venv/bin/activate
 pip install --require-hashes -r requirements.lock
-pip install pytest==9.1.1 pytest-asyncio==1.4.1
+pip install pytest==9.1.1 pytest-asyncio==1.4.1 -r benchmarks/requirements.txt
 python -m pytest -q
 docker build -t parakeet-redux:test .
 ```
@@ -168,5 +168,8 @@ Docker builds run five native C++ checks, including ternary kernels, and CI
 runs Python API/protocol/worker tests before publication. Native model inference
 must additionally be tested on the target hardware. `v*` tags publish the matching
 version to GHCR; main publishes `edge` (not recommended for stable deployment).
-Benchmark methodology/results will be added after deployment testing. Synthetic
-TTS tests are not evidence of real microphone, dialect or everyday performance.
+Measured comparison: [benchmark results](benchmarks/RESULTS.md),
+[method and reproduction](benchmarks/README.md), and [raw results](benchmarks/results/).
+In this two-thread CPU deployment, GPU Whisper was faster and more accurate on
+these synthetic German recordings. Synthetic TTS tests are not evidence of real
+microphone, dialect or everyday performance.

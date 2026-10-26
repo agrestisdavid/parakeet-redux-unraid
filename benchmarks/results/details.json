@@ -1,0 +1,934 @@
+{
+  "http": [
+    {
+      "id": "cmd01",
+      "reference": "Schalte das Licht in der Küche ein.",
+      "systems": {
+        "redux": {
+          "median_seconds": 0.4227117000846192,
+          "outputs": [
+            {
+              "text": "schalte das Licht in der Küche ein",
+              "word_errors": 0,
+              "word_count": 7,
+              "char_errors": 0,
+              "char_count": 28,
+              "exact": true
+            }
+          ]
+        },
+        "whisper": {
+          "median_seconds": 0.40551630000118166,
+          "outputs": [
+            {
+              "text": "Schalte das Licht in der Küche ein.",
+              "word_errors": 0,
+              "word_count": 7,
+              "char_errors": 0,
+              "char_count": 28,
+              "exact": true
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "cmd02",
+      "reference": "Schalte die Stehlampe im Wohnzimmer aus.",
+      "systems": {
+        "redux": {
+          "median_seconds": 0.5149251000257209,
+          "outputs": [
+            {
+              "text": "schalte die Stehlampe im Wohnzimmer aus.",
+              "word_errors": 0,
+              "word_count": 6,
+              "char_errors": 0,
+              "char_count": 34,
+              "exact": true
+            }
+          ]
+        },
+        "whisper": {
+          "median_seconds": 0.44752749998588115,
+          "outputs": [
+            {
+              "text": "Schalte die Stehlampe im Wohnzimmer aus.",
+              "word_errors": 0,
+              "word_count": 6,
+              "char_errors": 0,
+              "char_count": 34,
+              "exact": true
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "cmd03",
+      "reference": "Stelle die Heizung im Schlafzimmer auf einundzwanzig Grad.",
+      "systems": {
+        "redux": {
+          "median_seconds": 0.6136837999802083,
+          "outputs": [
+            {
+              "text": "Stelle die Heizung im Schlafzimmer auf 21 Grad.",
+              "word_errors": 0,
+              "word_count": 8,
+              "char_errors": 0,
+              "char_count": 50,
+              "exact": true
+            }
+          ]
+        },
+        "whisper": {
+          "median_seconds": 0.41029569995589554,
+          "outputs": [
+            {
+              "text": "Stelle die Heizung im Schlafzimmer auf 21 Grad.",
+              "word_errors": 0,
+              "word_count": 8,
+              "char_errors": 0,
+              "char_count": 50,
+              "exact": true
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "cmd04",
+      "reference": "Dimme das Licht im Esszimmer auf fünfzig Prozent.",
+      "systems": {
+        "redux": {
+          "median_seconds": 0.47126400005072355,
+          "outputs": [
+            {
+              "text": "Dimme das Licht im Eßzimmer auf 50%",
+              "word_errors": 0,
+              "word_count": 8,
+              "char_errors": 0,
+              "char_count": 41,
+              "exact": true
+            }
+          ]
+        },
+        "whisper": {
+          "median_seconds": 0.3949754999484867,
+          "outputs": [
+            {
+              "text": "Dimme das Licht im Esszimmer auf 50%.",
+              "word_errors": 0,
+              "word_count": 8,
+              "char_errors": 0,
+              "char_count": 41,
+              "exact": true
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "cmd05",
+      "reference": "Öffne die Rollläden im Arbeitszimmer.",
+      "systems": {
+        "redux": {
+          "median_seconds": 0.3708855001023039,
+          "outputs": [
+            {
+              "text": "Öffne die Rollläden im Arbeitszimmer.",
+              "word_errors": 0,
+              "word_count": 5,
+              "char_errors": 0,
+              "char_count": 32,
+              "exact": true
+            }
+          ]
+        },
+        "whisper": {
+          "median_seconds": 0.4157112999819219,
+          "outputs": [
+            {
+              "text": "Öffne die Rollläden im Arbeitszimmer.",
+              "word_errors": 0,
+              "word_count": 5,
+              "char_errors": 0,
+              "char_count": 32,
+              "exact": true
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "cmd06",
+      "reference": "Stelle einen Timer auf sieben Minuten und dreißig Sekunden.",
+      "systems": {
+        "redux": {
+          "median_seconds": 0.5033153999829665,
+          "outputs": [
+            {
+              "text": "Stelle einen Timer auf 7 Minuten und 30 Sekunden",
+              "word_errors": 0,
+              "word_count": 9,
+              "char_errors": 0,
+              "char_count": 51,
+              "exact": true
+            }
+          ]
+        },
+        "whisper": {
+          "median_seconds": 0.41737479995936155,
+          "outputs": [
+            {
+              "text": "Stelle einen Timer auf 7 Minuten und 30 Sekunden.",
+              "word_errors": 0,
+              "word_count": 9,
+              "char_errors": 0,
+              "char_count": 51,
+              "exact": true
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "num01",
+      "reference": "Der Termin ist morgen um achtzehn Uhr dreißig. Die Temperatur beträgt zweiundzwanzig Komma fünf Grad.",
+      "systems": {
+        "redux": {
+          "median_seconds": 0.710058500058949,
+          "outputs": [
+            {
+              "text": "Der Termin ist morgen um 18.30 Uhr. Die Temperatur beträgt 22,5 Grad.",
+              "word_errors": 0,
+              "word_count": 15,
+              "char_errors": 0,
+              "char_count": 86,
+              "exact": true
+            }
+          ]
+        },
+        "whisper": {
+          "median_seconds": 0.496284699998796,
+          "outputs": [
+            {
+              "text": "Der Termin ist morgen um 18.30 Uhr. Die Temperatur beträgt 22,5 Grad.",
+              "word_errors": 0,
+              "word_count": 15,
+              "char_errors": 0,
+              "char_count": 86,
+              "exact": true
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "num02",
+      "reference": "Bitte bestelle zwölf Schrauben, vier Muttern und drei Unterlegscheiben. Der Gesamtpreis beträgt vierundzwanzig Euro.",
+      "systems": {
+        "redux": {
+          "median_seconds": 0.9203932000091299,
+          "outputs": [
+            {
+              "text": "Bitte bestelle zwölf Schrauben, vier Muttern und drei Unterlegscheiben. Der Gesamtpreis beträgt 24 Euro.",
+              "word_errors": 0,
+              "word_count": 14,
+              "char_errors": 0,
+              "char_count": 100,
+              "exact": true
+            }
+          ]
+        },
+        "whisper": {
+          "median_seconds": 0.4560877000913024,
+          "outputs": [
+            {
+              "text": "Bitte bestelle 12 Schrauben, 4 Muttern und 3 Unterlegscheiben.  Der Gesamtpreis beträgt 24 Euro.",
+              "word_errors": 0,
+              "word_count": 14,
+              "char_errors": 0,
+              "char_count": 100,
+              "exact": true
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "name01",
+      "reference": "Bitte erinnere mich daran, Sabine Müller in Düsseldorf anzurufen.",
+      "systems": {
+        "redux": {
+          "median_seconds": 0.6014626000542194,
+          "outputs": [
+            {
+              "text": "Bitte erinnere mich daran, Sabine Müller in Düsseldorf anzurufen.",
+              "word_errors": 0,
+              "word_count": 9,
+              "char_errors": 0,
+              "char_count": 55,
+              "exact": true
+            }
+          ]
+        },
+        "whisper": {
+          "median_seconds": 0.4383193999528885,
+          "outputs": [
+            {
+              "text": "Bitte erinnere mich daran, Sabine Müller in Düsseldorf anzurufen.",
+              "word_errors": 0,
+              "word_count": 9,
+              "char_errors": 0,
+              "char_count": 55,
+              "exact": true
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "name02",
+      "reference": "Die Lieferung für Jürgen Schneider geht nach München in die Bahnhofstraße.",
+      "systems": {
+        "redux": {
+          "median_seconds": 0.5642515000654384,
+          "outputs": [
+            {
+              "text": "Die Lieferung für Jögenschneider geht nach München in die Bahnhofstraße.",
+              "word_errors": 2,
+              "word_count": 11,
+              "char_errors": 2,
+              "char_count": 64,
+              "exact": false
+            }
+          ]
+        },
+        "whisper": {
+          "median_seconds": 0.46819029992911965,
+          "outputs": [
+            {
+              "text": "Die Lieferung für Jürgen Schneider geht nach München in die Bahnhofstraße.",
+              "word_errors": 0,
+              "word_count": 11,
+              "char_errors": 0,
+              "char_count": 64,
+              "exact": true
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "dict01",
+      "reference": "Heute habe ich die Unterlagen geprüft. Einige Angaben fehlen noch, deshalb schicke ich dir morgen eine ergänzte Fassung. Bitte ändere bis dahin nichts an der vorhandenen Planung.",
+      "systems": {
+        "redux": {
+          "median_seconds": 1.1216033999808133,
+          "outputs": [
+            {
+              "text": "Heute habe ich die Unterlagen geprüft. Einige Angaben fehlen noch, deshalb schicke ich dir morgen eine ergänzte Fassung. Bitte ändere bis dahin nichts an der vorhandenen Planung.",
+              "word_errors": 0,
+              "word_count": 27,
+              "char_errors": 0,
+              "char_count": 148,
+              "exact": true
+            }
+          ]
+        },
+        "whisper": {
+          "median_seconds": 0.5420261999825016,
+          "outputs": [
+            {
+              "text": "Heute habe ich die Unterlagen geprüft. Einige Angaben fehlen noch.  Deshalb schicke ich dir morgen eine ergänzte Fassung.  Bitte ändere bis dahin nichts an der vorhandenen Planung.",
+              "word_errors": 0,
+              "word_count": 27,
+              "char_errors": 0,
+              "char_count": 148,
+              "exact": true
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "dict02",
+      "reference": "Wenn das Fenster geöffnet ist, soll die Heizung ausgeschaltet bleiben. Sobald es wieder geschlossen wird, darf die vorherige Temperatur eingestellt werden. Das Licht soll davon unabhängig bleiben.",
+      "systems": {
+        "redux": {
+          "median_seconds": 1.573853399953805,
+          "outputs": [
+            {
+              "text": "Wenn das Fenster geöffnet ist, soll die Heizung ausgeschaltet bleiben. Sobald es wieder geschlossen wird, darf die vorherige Temperatur eingestellt werden. Das Licht soll davon unabhängig bleiben.",
+              "word_errors": 0,
+              "word_count": 27,
+              "char_errors": 0,
+              "char_count": 165,
+              "exact": true
+            }
+          ]
+        },
+        "whisper": {
+          "median_seconds": 0.621747300028801,
+          "outputs": [
+            {
+              "text": "Wenn das Fenster geöffnet ist, soll die Heizung ausgeschaltet bleiben.  Sobald es wieder geschlossen wird, darf die vorherige Temperatur eingestellt werden.  Das Licht soll davon unabhängig bleiben.",
+              "word_errors": 0,
+              "word_count": 27,
+              "char_errors": 0,
+              "char_count": 165,
+              "exact": true
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "long01",
+      "reference": "Für unseren nächsten Ausflug müssen wir noch ein paar Dinge vorbereiten. Zuerst prüfen wir am Freitag den Wetterbericht und entscheiden, ob wir mit dem Zug oder mit dem Auto fahren. Bei Regen nehmen wir zusätzlich feste Schuhe und warme Jacken mit. Am Samstag treffen wir uns nach dem Frühstück am Bahnhof. Jeder bringt etwas zu trinken mit, und die belegten Brote verteilen wir auf zwei Rucksäcke. Unterwegs möchten wir eine längere Pause an einem ruhigen Platz machen. Wenn jemand früher zurückfahren möchte, kann er den Zug am Nachmittag nehmen. Die anderen bleiben bis zum Abend und gehen gemeinsam essen. Wichtig ist nur, dass wir uns rechtzeitig Bescheid sagen und niemand allein am Treffpunkt wartet.",
+      "systems": {
+        "redux": {
+          "median_seconds": 5.53587229992263,
+          "outputs": [
+            {
+              "text": "Für unseren nächsten Ausflug müssen wir noch ein paar Dinge vorbereiten. Zuerst prüfen wir am Freitag den Wetterbericht und entscheiden, ob wir mit dem Zug oder mit dem Auto fahren. Bei Regen nehmen wir zusätzlich feste Schuhe und warme Jacken mit. Am Samstag treffen wir uns nach dem Frühstück am Bahnhof. Jeder bringt etwas zu trinken mit, und die belegten Brote verteilen wir auf zwei Rucksäcke. Unterwegs möchten wir eine längere Pause an einem ruhigen Platz machen. Wenn jemand früher zurückfahren möchte, kann er den Zug am Nachmittag nehmen. Die anderen bleiben bis zum Abend und gehen gemeinsam essen. Wichtig ist nur, dass wir uns rechtzeitig bescheit sagen und niemand allein am Treffpunkt wartet.",
+              "word_errors": 1,
+              "word_count": 114,
+              "char_errors": 1,
+              "char_count": 581,
+              "exact": false
+            }
+          ]
+        },
+        "whisper": {
+          "median_seconds": 1.2759454000042751,
+          "outputs": [
+            {
+              "text": "Für unseren nächsten Ausflug müssen wir noch ein paar Dinge vorbereiten.  Zuerst prüfen wir am Freitag den Wetterbericht und entscheiden, ob wir mit dem Zug oder mit dem Auto fahren.  Bei Regen nehmen wir zusätzlich feste Schuhe und warme Jacken mit.  Am Samstag treffen wir uns nach dem Frühstück am Bahnhof.  Jeder bringt etwas zu trinken mit und die belegten Brote verteilen wir auf zwei Rucksäcke.  Unterwegs möchten wir eine längere Pause an einem ruhigen Platz machen.  Wenn jemand früher zurückfahren möchte, kann er den Zug am Nachmittag nehmen.  Die anderen bleiben bis zum Abend und gehen gemeinsam essen.  Wichtig ist nur, dass wir uns rechtzeitig Bescheid sagen und niemand allein am Treffpunkt wartet.",
+              "word_errors": 0,
+              "word_count": 114,
+              "char_errors": 0,
+              "char_count": 581,
+              "exact": true
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "long02",
+      "reference": "Beim Einrichten einer Sprachsteuerung kommt es nicht nur auf eine schnelle Antwort an. Das System muss auch verstehen, welches Gerät gemeint ist und welche Änderung gewünscht wird. Ein kurzer Befehl kann leicht missverstanden werden, wenn im Hintergrund Musik läuft oder mehrere Personen gleichzeitig sprechen. Deshalb sollten wir zuerst einfache Sätze in einem ruhigen Raum testen. Danach können wir die gleichen Aufnahmen mit zusätzlichen Geräuschen vergleichen. Die Einstellungen müssen während dieser Messung unverändert bleiben. Außerdem ist es wichtig, die Zeit nach dem Ende des gesprochenen Satzes zu messen. Eine hohe Verarbeitungsgeschwindigkeit allein sagt noch nicht, wie lange ein Mensch auf die Antwort wartet. Zum Schluss betrachten wir die erkannten Wörter und prüfen besonders die Zahlen, Namen und Verneinungen.",
+      "systems": {
+        "redux": {
+          "median_seconds": 7.012621800065972,
+          "outputs": [
+            {
+              "text": "Beim Einrichten einer Sprachsteuerung kommt es nicht nur auf eine schnelle Antwort an. Das System muss auch verstehen, welches Gerät gemeint ist und welche Änderung gewünscht wird. Ein kurzer Befehl kann leicht missverstanden werden, wenn im Hintergrund Musik läuft oder mehrere Personen gleichzeitig sprechen. Deshalb sollten wir zuerst einfache Sätze in einem ruhigen Raum testen. Danach können wir die gleichen Aufnahmen mit zusätzlichen Geräuschen vergleichen. Die Einstellungen müssen während dieser Messung unverändert bleiben. Außerdem ist es wichtig, die Zeit nach dem Ende des gesprochenen Satzes zu messen. Eine hohe Verarbeitungsgeschwindigkeit allein sagt noch nicht, wie lange ein Mensch auf die Antwort wartet. Zum Schluss betrachten wir die erkannten Wörter und prüfen besonders die Zahlen, Namen und Verneinungen.",
+              "word_errors": 0,
+              "word_count": 117,
+              "char_errors": 0,
+              "char_count": 700,
+              "exact": true
+            }
+          ]
+        },
+        "whisper": {
+          "median_seconds": 1.6566717999521643,
+          "outputs": [
+            {
+              "text": "Beim Einrichten einer Sprachsteuerung kommt es nicht nur auf eine schnelle Antwort an.  Das System muss auch verstehen, welches Gerät gemeint ist und welche Änderung gewünscht wird.  Ein kurzer Befehl kann leicht missverstanden werden, wenn im Hintergrund Musik läuft oder mehrere Personen gleichzeitig sprechen.  Deshalb sollten wir zuerst einfache Sätze in einem ruhigen Raum testen.  Danach können wir die gleichen Aufnahmen mit zusätzlichen Geräuschen vergleichen.  Die Einstellungen müssen während dieser Messung unverändert bleiben.  Außerdem ist es wichtig, die Zeit nach dem Ende des gesprochenen Satzes zu messen.  Eine hohe Verarbeitungsgeschwindigkeit allein sagt noch nicht, wie lange ein Mensch auf die Antwort wartet.  Zum Schluss betrachten wir die erkannten Wörter und prüfen besonders die Zahlen, Namen und Verneinungen.",
+              "word_errors": 0,
+              "word_count": 117,
+              "char_errors": 0,
+              "char_count": 700,
+              "exact": true
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "cmd01_noise10",
+      "reference": "Schalte das Licht in der Küche ein.",
+      "systems": {
+        "redux": {
+          "median_seconds": 0.3572883000597358,
+          "outputs": [
+            {
+              "text": "schalte das Licht in der Küche ein.",
+              "word_errors": 0,
+              "word_count": 7,
+              "char_errors": 0,
+              "char_count": 28,
+              "exact": true
+            }
+          ]
+        },
+        "whisper": {
+          "median_seconds": 0.3985840000677854,
+          "outputs": [
+            {
+              "text": "Schalte das Licht in der Küche ein.",
+              "word_errors": 0,
+              "word_count": 7,
+              "char_errors": 0,
+              "char_count": 28,
+              "exact": true
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "cmd01_noise0",
+      "reference": "Schalte das Licht in der Küche ein.",
+      "systems": {
+        "redux": {
+          "median_seconds": 0.35989530000369996,
+          "outputs": [
+            {
+              "text": "streigte das Licht in der Küche ein.",
+              "word_errors": 1,
+              "word_count": 7,
+              "char_errors": 5,
+              "char_count": 28,
+              "exact": false
+            }
+          ]
+        },
+        "whisper": {
+          "median_seconds": 0.39239850000012666,
+          "outputs": [
+            {
+              "text": "Ich schalte das Licht in der Küche ein.",
+              "word_errors": 1,
+              "word_count": 7,
+              "char_errors": 3,
+              "char_count": 28,
+              "exact": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "cmd03_noise10",
+      "reference": "Stelle die Heizung im Schlafzimmer auf einundzwanzig Grad.",
+      "systems": {
+        "redux": {
+          "median_seconds": 0.6066115000285208,
+          "outputs": [
+            {
+              "text": "Stelle die Heizung im Schlafzimmer auf 21 Grad.",
+              "word_errors": 0,
+              "word_count": 8,
+              "char_errors": 0,
+              "char_count": 50,
+              "exact": true
+            }
+          ]
+        },
+        "whisper": {
+          "median_seconds": 0.4244603000115603,
+          "outputs": [
+            {
+              "text": "Stelle die Heizung im Schlafzimmer auf 21 Grad.",
+              "word_errors": 0,
+              "word_count": 8,
+              "char_errors": 0,
+              "char_count": 50,
+              "exact": true
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "cmd03_noise0",
+      "reference": "Stelle die Heizung im Schlafzimmer auf einundzwanzig Grad.",
+      "systems": {
+        "redux": {
+          "median_seconds": 0.5660653000231832,
+          "outputs": [
+            {
+              "text": "Stelle die Heizung im Schlafzimmer auf 21 Grad.",
+              "word_errors": 0,
+              "word_count": 8,
+              "char_errors": 0,
+              "char_count": 50,
+              "exact": true
+            }
+          ]
+        },
+        "whisper": {
+          "median_seconds": 0.4458305999869481,
+          "outputs": [
+            {
+              "text": "Stelle die Heizung im Schlafzimmer auf 21 Grad.",
+              "word_errors": 0,
+              "word_count": 8,
+              "char_errors": 0,
+              "char_count": 50,
+              "exact": true
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "name01_noise10",
+      "reference": "Bitte erinnere mich daran, Sabine Müller in Düsseldorf anzurufen.",
+      "systems": {
+        "redux": {
+          "median_seconds": 0.5501432999735698,
+          "outputs": [
+            {
+              "text": "Bitte erinnere mich daran, Sabine Müller in Düsseldorf anzurufen.",
+              "word_errors": 0,
+              "word_count": 9,
+              "char_errors": 0,
+              "char_count": 55,
+              "exact": true
+            }
+          ]
+        },
+        "whisper": {
+          "median_seconds": 0.45483770000282675,
+          "outputs": [
+            {
+              "text": "Bitte erinnere mich daran, Sabine Müller in Düsseldorf anzurufen.",
+              "word_errors": 0,
+              "word_count": 9,
+              "char_errors": 0,
+              "char_count": 55,
+              "exact": true
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "name01_noise0",
+      "reference": "Bitte erinnere mich daran, Sabine Müller in Düsseldorf anzurufen.",
+      "systems": {
+        "redux": {
+          "median_seconds": 0.5863481999840587,
+          "outputs": [
+            {
+              "text": "Bitte erinnere mich daran, Sabine Müller in Disseldorf anzuwenden.",
+              "word_errors": 2,
+              "word_count": 9,
+              "char_errors": 5,
+              "char_count": 55,
+              "exact": false
+            }
+          ]
+        },
+        "whisper": {
+          "median_seconds": 0.43479470000602305,
+          "outputs": [
+            {
+              "text": "Bitte erinnere mich daran, Sabine Müller in Güsseldorf anzurufen.",
+              "word_errors": 1,
+              "word_count": 9,
+              "char_errors": 1,
+              "char_count": 55,
+              "exact": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "dict01_noise10",
+      "reference": "Heute habe ich die Unterlagen geprüft. Einige Angaben fehlen noch, deshalb schicke ich dir morgen eine ergänzte Fassung. Bitte ändere bis dahin nichts an der vorhandenen Planung.",
+      "systems": {
+        "redux": {
+          "median_seconds": 1.1287988999392837,
+          "outputs": [
+            {
+              "text": "Heute habe ich die Unterlagen geprüft. Einige Angaben fehlen noch, deshalb schicke ich dir morgen eine ergänzte Fassung. Bitte ändere bis dahin nichts an der vorhandenen Planung.",
+              "word_errors": 0,
+              "word_count": 27,
+              "char_errors": 0,
+              "char_count": 148,
+              "exact": true
+            }
+          ]
+        },
+        "whisper": {
+          "median_seconds": 0.534900699974969,
+          "outputs": [
+            {
+              "text": "Heute habe ich die Unterlagen geprüft. Einige Angaben fehlen noch. Deshalb schicke ich dir morgen eine ergänzte Fassung. Bitte ändere bis dahin nichts an der vorhandenen Planung.",
+              "word_errors": 0,
+              "word_count": 27,
+              "char_errors": 0,
+              "char_count": 148,
+              "exact": true
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "dict01_noise0",
+      "reference": "Heute habe ich die Unterlagen geprüft. Einige Angaben fehlen noch, deshalb schicke ich dir morgen eine ergänzte Fassung. Bitte ändere bis dahin nichts an der vorhandenen Planung.",
+      "systems": {
+        "redux": {
+          "median_seconds": 1.1408592999214306,
+          "outputs": [
+            {
+              "text": "Heute habe ich die Unterlagen gegeben. Einige Angaben fehen noch. Deshalb schicke ich dir morgen eine ergänzte Fassung. Bitte ändere bis dahin nichts an der vorhandenen Zahlung.",
+              "word_errors": 3,
+              "word_count": 27,
+              "char_errors": 10,
+              "char_count": 148,
+              "exact": false
+            }
+          ]
+        },
+        "whisper": {
+          "median_seconds": 0.5710728999692947,
+          "outputs": [
+            {
+              "text": "Heute habe ich die Unterlagen gekriegt.  Einige Angaben fehlen noch.  Deshalb schicke ich dir morgen eine ergänzte Passung.  Bitte ändere bis dahin nichts an der vorhandenen Planung.",
+              "word_errors": 2,
+              "word_count": 27,
+              "char_errors": 5,
+              "char_count": 148,
+              "exact": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "silence",
+      "reference": "",
+      "systems": {
+        "redux": {
+          "median_seconds": 0.3385721000377089,
+          "outputs": [
+            {
+              "text": "",
+              "word_errors": 0,
+              "word_count": 0,
+              "char_errors": 0,
+              "char_count": 0,
+              "exact": true
+            }
+          ]
+        },
+        "whisper": {
+          "median_seconds": 0.4168133999919519,
+          "outputs": [
+            {
+              "text": "Untertitelung des ZDF, 2020",
+              "word_errors": 4,
+              "word_count": 0,
+              "char_errors": 37,
+              "char_count": 0,
+              "exact": false
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "realtime": [
+    {
+      "id": "cmd01",
+      "reference": "Schalte das Licht in der Küche ein.",
+      "systems": {
+        "redux": {
+          "median_seconds": 3.2570220000343397,
+          "outputs": [
+            {
+              "text": "schalte das Licht in der Küche ein",
+              "word_errors": 0,
+              "word_count": 7,
+              "char_errors": 0,
+              "char_count": 28,
+              "exact": true
+            }
+          ]
+        },
+        "whisper": {
+          "median_seconds": 3.1899845000589266,
+          "outputs": [
+            {
+              "text": " Schalte das Licht in der Küche ein.",
+              "word_errors": 0,
+              "word_count": 7,
+              "char_errors": 0,
+              "char_count": 28,
+              "exact": true
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "cmd02",
+      "reference": "Schalte die Stehlampe im Wohnzimmer aus.",
+      "systems": {
+        "redux": {
+          "median_seconds": 3.658523099962622,
+          "outputs": [
+            {
+              "text": "schalte die Stehlampe im Wohnzimmer aus.",
+              "word_errors": 0,
+              "word_count": 6,
+              "char_errors": 0,
+              "char_count": 34,
+              "exact": true
+            }
+          ]
+        },
+        "whisper": {
+          "median_seconds": 3.535709199961275,
+          "outputs": [
+            {
+              "text": " Schalte die Stehlampe im Wohnzimmer aus.",
+              "word_errors": 0,
+              "word_count": 6,
+              "char_errors": 0,
+              "char_count": 34,
+              "exact": true
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "cmd03",
+      "reference": "Stelle die Heizung im Schlafzimmer auf einundzwanzig Grad.",
+      "systems": {
+        "redux": {
+          "median_seconds": 4.763180700014345,
+          "outputs": [
+            {
+              "text": "Stelle die Heizung im Schlafzimmer auf 21 Grad.",
+              "word_errors": 0,
+              "word_count": 8,
+              "char_errors": 0,
+              "char_count": 50,
+              "exact": true
+            }
+          ]
+        },
+        "whisper": {
+          "median_seconds": 4.59046579990536,
+          "outputs": [
+            {
+              "text": " Stelle die Heizung im Schlafzimmer auf 21 Grad.",
+              "word_errors": 0,
+              "word_count": 8,
+              "char_errors": 0,
+              "char_count": 50,
+              "exact": true
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "cmd04",
+      "reference": "Dimme das Licht im Esszimmer auf fünfzig Prozent.",
+      "systems": {
+        "redux": {
+          "median_seconds": 4.161407000035979,
+          "outputs": [
+            {
+              "text": "Dimme das Licht im Eßzimmer auf 50%",
+              "word_errors": 0,
+              "word_count": 8,
+              "char_errors": 0,
+              "char_count": 41,
+              "exact": true
+            }
+          ]
+        },
+        "whisper": {
+          "median_seconds": 4.027769400039688,
+          "outputs": [
+            {
+              "text": " Dimme das Licht im Esszimmer auf 50 Prozent.",
+              "word_errors": 0,
+              "word_count": 8,
+              "char_errors": 0,
+              "char_count": 41,
+              "exact": true
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "cmd05",
+      "reference": "Öffne die Rollläden im Arbeitszimmer.",
+      "systems": {
+        "redux": {
+          "median_seconds": 3.162419099942781,
+          "outputs": [
+            {
+              "text": "Öffne die Rollläden im Arbeitszimmer.",
+              "word_errors": 0,
+              "word_count": 5,
+              "char_errors": 0,
+              "char_count": 32,
+              "exact": true
+            }
+          ]
+        },
+        "whisper": {
+          "median_seconds": 3.090912099927664,
+          "outputs": [
+            {
+              "text": " Öffne die Rollläden im Arbeitszimmer.",
+              "word_errors": 0,
+              "word_count": 5,
+              "char_errors": 0,
+              "char_count": 32,
+              "exact": true
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "cmd06",
+      "reference": "Stelle einen Timer auf sieben Minuten und dreißig Sekunden.",
+      "systems": {
+        "redux": {
+          "median_seconds": 5.083317899960093,
+          "outputs": [
+            {
+              "text": "Stelle einen Timer auf 7 Minuten und 30 Sekunden",
+              "word_errors": 0,
+              "word_count": 9,
+              "char_errors": 0,
+              "char_count": 51,
+              "exact": true
+            }
+          ]
+        },
+        "whisper": {
+          "median_seconds": 4.771189599996433,
+          "outputs": [
+            {
+              "text": " Stelle einen Timer auf 7 Minuten und 30 Sekunden.",
+              "word_errors": 0,
+              "word_count": 9,
+              "char_errors": 0,
+              "char_count": 51,
+              "exact": true
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

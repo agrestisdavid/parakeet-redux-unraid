@@ -1,0 +1,145 @@
+{
+  "method": "Independent local Whisper small via whisper.cpp b5454, CPU, de, four threads; not a human listening test. Signal RMS/clipping/duration checked separately. No reference text supplied to recognizer.",
+  "clips": [
+    {
+      "id": "cmd01",
+      "requested_text": "Schalte das Licht in der Küche ein.",
+      "audit_text": "Schalte das Licht in der Küche ein.",
+      "word_errors": 0,
+      "word_count": 7,
+      "char_errors": 0,
+      "char_count": 28,
+      "exact": true
+    },
+    {
+      "id": "cmd02",
+      "requested_text": "Schalte die Stehlampe im Wohnzimmer aus.",
+      "audit_text": "Schalte die Stehlampe im Wohnzimmer aus.",
+      "word_errors": 0,
+      "word_count": 6,
+      "char_errors": 0,
+      "char_count": 34,
+      "exact": true
+    },
+    {
+      "id": "cmd03",
+      "requested_text": "Stelle die Heizung im Schlafzimmer auf einundzwanzig Grad.",
+      "audit_text": "Stelle die Heizung im Schlafzimmer auf 21 Grad.",
+      "word_errors": 0,
+      "word_count": 8,
+      "char_errors": 0,
+      "char_count": 50,
+      "exact": true
+    },
+    {
+      "id": "cmd04",
+      "requested_text": "Dimme das Licht im Esszimmer auf fünfzig Prozent.",
+      "audit_text": "Dimme das Licht im Esszimmer auf 50 Prozent.",
+      "word_errors": 0,
+      "word_count": 8,
+      "char_errors": 0,
+      "char_count": 41,
+      "exact": true
+    },
+    {
+      "id": "cmd05",
+      "requested_text": "Öffne die Rollläden im Arbeitszimmer.",
+      "audit_text": "Öffne die Rollläden im Arbeitszimmer.",
+      "word_errors": 0,
+      "word_count": 5,
+      "char_errors": 0,
+      "char_count": 32,
+      "exact": true
+    },
+    {
+      "id": "cmd06",
+      "requested_text": "Stelle einen Timer auf sieben Minuten und dreißig Sekunden.",
+      "audit_text": "Stelle einen Timer auf 7 Minuten und 30 Sekunden.",
+      "word_errors": 0,
+      "word_count": 9,
+      "char_errors": 0,
+      "char_count": 51,
+      "exact": true
+    },
+    {
+      "id": "num01",
+      "requested_text": "Der Termin ist morgen um achtzehn Uhr dreißig. Die Temperatur beträgt zweiundzwanzig Komma fünf Grad.",
+      "audit_text": "Der Termin ist morgen um 18.30 Uhr. Die Temperatur beträgt 22,5 Grad.",
+      "word_errors": 0,
+      "word_count": 15,
+      "char_errors": 0,
+      "char_count": 86,
+      "exact": true
+    },
+    {
+      "id": "num02",
+      "requested_text": "Bitte bestelle zwölf Schrauben, vier Muttern und drei Unterlegscheiben. Der Gesamtpreis beträgt vierundzwanzig Euro.",
+      "audit_text": "Bitte bestelle zwölf Schrauben, vier Muttern und drei Unterlegscheiben.\nDer Gesamtpreis beträgt 24 Euro.",
+      "word_errors": 0,
+      "word_count": 14,
+      "char_errors": 0,
+      "char_count": 100,
+      "exact": true
+    },
+    {
+      "id": "name01",
+      "requested_text": "Bitte erinnere mich daran, Sabine Müller in Düsseldorf anzurufen.",
+      "audit_text": "Bitte erinnere mich daran, Sabine Müller in Düsseldorf anzurufen.",
+      "word_errors": 0,
+      "word_count": 9,
+      "char_errors": 0,
+      "char_count": 55,
+      "exact": true
+    },
+    {
+      "id": "name02",
+      "requested_text": "Die Lieferung für Jürgen Schneider geht nach München in die Bahnhofstraße.",
+      "audit_text": "Die Lieferung für Jürgen Schneider geht nach München in die Bahnhofstraße.",
+      "word_errors": 0,
+      "word_count": 11,
+      "char_errors": 0,
+      "char_count": 64,
+      "exact": true
+    },
+    {
+      "id": "dict01",
+      "requested_text": "Heute habe ich die Unterlagen geprüft. Einige Angaben fehlen noch, deshalb schicke ich dir morgen eine ergänzte Fassung. Bitte ändere bis dahin nichts an der vorhandenen Planung.",
+      "audit_text": "Heute habe ich die Unterlagen geprüft. Einige Angaben fehlen noch, deshalb schicke\nich dir morgen eine ergänzte Fassung. Bitte endere bis dahin nichts an der vorhandenen Planung.",
+      "word_errors": 1,
+      "word_count": 27,
+      "char_errors": 1,
+      "char_count": 148,
+      "exact": false
+    },
+    {
+      "id": "dict02",
+      "requested_text": "Wenn das Fenster geöffnet ist, soll die Heizung ausgeschaltet bleiben. Sobald es wieder geschlossen wird, darf die vorherige Temperatur eingestellt werden. Das Licht soll davon unabhängig bleiben.",
+      "audit_text": "Wenn das Fenster geöffnet ist, soll die Heizung ausgeschaltet bleiben.\nSobald es wieder geschlossen wird, darf die vorherige Temperatur eingestellt werden.\nDas Licht soll davon unabhängig bleiben.",
+      "word_errors": 0,
+      "word_count": 27,
+      "char_errors": 0,
+      "char_count": 165,
+      "exact": true
+    },
+    {
+      "id": "long01",
+      "requested_text": "Für unseren nächsten Ausflug müssen wir noch ein paar Dinge vorbereiten. Zuerst prüfen wir am Freitag den Wetterbericht und entscheiden, ob wir mit dem Zug oder mit dem Auto fahren. Bei Regen nehmen wir zusätzlich feste Schuhe und warme Jacken mit. Am Samstag treffen wir uns nach dem Frühstück am Bahnhof. Jeder bringt etwas zu trinken mit, und die belegten Brote verteilen wir auf zwei Rucksäcke. Unterwegs möchten wir eine längere Pause an einem ruhigen Platz machen. Wenn jemand früher zurückfahren möchte, kann er den Zug am Nachmittag nehmen. Die anderen bleiben bis zum Abend und gehen gemeinsam essen. Wichtig ist nur, dass wir uns rechtzeitig Bescheid sagen und niemand allein am Treffpunkt wartet.",
+      "audit_text": "Für unseren nächsten Ausflug müssen wir noch ein paar Dinge vorbereiten.\nZuerst prüfen wir am Freitag den Wetterbericht und entscheiden, ob wir mit dem Zug oder\nmit dem Auto fahren.\nBei Regen nehmen wir zusätzlich feste Schuhe und warme Jacken mit.\nAm Samstag treffen wir uns nach dem Frühstück am Bahnhof.\nJeder bringt etwas zu trinken mit und die belegten Brote verteilen wir auf zwei Rucksäcke.\nUnterwegs möchten wir eine längere Pause an einem ruhigen Platz machen.\nWenn jemand früher zurückfahren möchte, kann er den Zug am Nachmittag nehmen.\nDie anderen bleiben bis zum Abend und gehen gemeinsam essen.\nWichtig ist nur, dass wir uns rechtzeitig Bescheid sagen und niemand allein am Treffpunkt wartet.",
+      "word_errors": 0,
+      "word_count": 114,
+      "char_errors": 0,
+      "char_count": 581,
+      "exact": true
+    },
+    {
+      "id": "long02",
+      "requested_text": "Beim Einrichten einer Sprachsteuerung kommt es nicht nur auf eine schnelle Antwort an. Das System muss auch verstehen, welches Gerät gemeint ist und welche Änderung gewünscht wird. Ein kurzer Befehl kann leicht missverstanden werden, wenn im Hintergrund Musik läuft oder mehrere Personen gleichzeitig sprechen. Deshalb sollten wir zuerst einfache Sätze in einem ruhigen Raum testen. Danach können wir die gleichen Aufnahmen mit zusätzlichen Geräuschen vergleichen. Die Einstellungen müssen während dieser Messung unverändert bleiben. Außerdem ist es wichtig, die Zeit nach dem Ende des gesprochenen Satzes zu messen. Eine hohe Verarbeitungsgeschwindigkeit allein sagt noch nicht, wie lange ein Mensch auf die Antwort wartet. Zum Schluss betrachten wir die erkannten Wörter und prüfen besonders die Zahlen, Namen und Verneinungen.",
+      "audit_text": "Beim Einrichten einer Sprachsteuerung kommt es nicht nur auf eine schnelle Antwort an.\nDas System muss auch verstehen, welches Gerät gemeint ist und welche Änderung gewünscht wird.\nEin kurzer Befehl kann leicht missverstanden werden, wenn im Hintergrund Musik läuft\noder mehrere Personen gleichzeitig sprechen.\nDeshalb sollten wir zuerst einfache Sätze in einem ruhigen Raum testen.\nDanach können wir die gleichen Aufnahmen mit zusätzlichen Geräuschen vergleichen.\nDie Einstellungen müssen während dieser Messung unverändert bleiben.\nAußerdem ist es wichtig, die Zeit nach dem Ende des gesprochenen Satzes zu messen.\nEine hohe Verarbeitungsgeschwindigkeit allein sagt noch nicht, wie lange ein Mensch auf die Antwort wartet.\nZum Schluss betrachten wir die erkannten Wörter und prüfen besonders die Zahlen, Namen und Verneinungen.",
+      "word_errors": 0,
+      "word_count": 117,
+      "char_errors": 0,
+      "char_count": 700,
+      "exact": true
+    }
+  ]
+}

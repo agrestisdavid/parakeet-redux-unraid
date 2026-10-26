@@ -36,6 +36,7 @@ async def generate(args):
                     'temperature':0.1,'top_p':0.3,'top_k':150,'repetition_penalty':1.3,'do_sample':True,'seed':0,
                     'max_new_tokens':4096,'non_streaming_mode':False,'streaming_chunk_size':120,
                     'token_safety_margin':8,'max_segment_chars':500,'segment_pause_ms':120}
+            params.update(item.get('tts_options', {}))
             # Resume only this corpus: hash records prevent stale audio silently passing.
             request_hash=hashlib.sha256(json.dumps(params,sort_keys=True).encode()).hexdigest()
             record=out/(item['id']+'.generation.json')

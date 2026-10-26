@@ -1,0 +1,77 @@
+{
+  "all_passed": true,
+  "cases": [
+    {
+      "case": "discovery",
+      "pass": true
+    },
+    {
+      "case": "real PCM chunks, no premature text, two utterances per connection",
+      "pass": true,
+      "transcript": "schalte das Licht in der Küche ein"
+    },
+    {
+      "case": "PCM16 8000Hz channels=1",
+      "pass": true,
+      "transcript": "schalte das Licht in der Küche ein"
+    },
+    {
+      "case": "PCM16 16000Hz channels=1",
+      "pass": true,
+      "transcript": "schaltte das Licht in der Küche ein"
+    },
+    {
+      "case": "PCM16 48000Hz channels=2",
+      "pass": true,
+      "transcript": "schalte das Licht in der Küche ein"
+    },
+    {
+      "case": "empty + reconnect",
+      "pass": true
+    },
+    {
+      "case": "bad_format + reconnect",
+      "pass": true
+    },
+    {
+      "case": "changed_format + reconnect",
+      "pass": true
+    },
+    {
+      "case": "oversized_header + reconnect",
+      "pass": true
+    },
+    {
+      "case": "unknown_event + reconnect",
+      "pass": true
+    },
+    {
+      "case": "unsupported_language + reconnect",
+      "pass": true
+    },
+    {
+      "case": "disconnect during capture discards audio",
+      "pass": true
+    },
+    {
+      "case": "disconnect during native inference, recovery, next transcript",
+      "pass": true
+    },
+    {
+      "case": "one shared inference slot / HTTP busy rejection",
+      "pass": true
+    },
+    {
+      "case": "HTTP rejects unsupported stream",
+      "pass": true
+    },
+    {
+      "case": "HTTP rejects unsupported prompt",
+      "pass": true
+    },
+    {
+      "case": "HTTP rejects unsupported language",
+      "pass": true
+    }
+  ]
+}

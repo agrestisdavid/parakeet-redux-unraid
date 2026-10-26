@@ -16,7 +16,7 @@ jobs:
         with:
           python-version: '3.12'
       - run: pip install --require-hashes -r requirements.lock
-      - run: pip install pytest==9.1.1 pytest-asyncio==1.4.1
+      - run: pip install pytest==9.1.1 pytest-asyncio==1.4.1 -r benchmarks/requirements.txt
       - run: python -m pytest -q
   image:
     needs: test

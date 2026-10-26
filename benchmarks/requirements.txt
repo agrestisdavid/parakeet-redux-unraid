@@ -1,0 +1,3 @@
+numpy==2.3.4
+num2words==0.5.14
+# Install the runtime requirements.lock as well (aiohttp and wyoming).
