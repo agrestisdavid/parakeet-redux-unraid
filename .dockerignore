@@ -1,5 +1,6 @@
 *
 !Dockerfile
+!debian.sources
 !requirements.lock
 !LICENSE
 !NOTICE.md

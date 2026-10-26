@@ -24,9 +24,14 @@ not an official Moondream, NVIDIA, Unraid or Home Assistant app.
   audio duration. Model file size is not peak RAM usage.
 
 See [NOTICE.md](NOTICE.md) for licenses, authors, source/model revisions and SHA-256.
-Base image, model, native source and Python dependencies are pinned. Debian apt
-packages receive current Bookworm fixes at build time, so builds are source-
-reproducible, not claimed byte-identical. Deploy an image digest for exact rollback.
+Base image, model, native source and Python dependencies are pinned. Since 0.1.1,
+Debian and Debian-security repositories are also frozen to **20261026T000000Z**
+(`debian.sources`), and directly installed apt packages have explicit versions.
+Transitive package resolution uses only that fixed, signed snapshot. Full installed
+build/runtime package manifests are retained in `/opt/licenses/*-packages.txt`.
+Security updates require a deliberate snapshot/version bump and retest; builds are
+not claimed bit-identical because timestamps/tooling metadata can differ. Deploy
+an image digest for exact rollback.
 
 ## Streaming: what this app actually does
 
@@ -75,7 +80,7 @@ docker run -d --name Parakeet-Redux --restart unless-stopped \
   -p "${LAN_IP}:10320:8080" -p "${LAN_IP}:10330:10300" \
   -v /mnt/user/appdata/parakeet-redux:/data \
   -e CPU_THREADS=2 \
-  ghcr.io/agrestisdavid/parakeet-redux-unraid:0.1.0
+  ghcr.io/agrestisdavid/parakeet-redux-unraid:0.1.1
 ```
 
 ## Interfaces

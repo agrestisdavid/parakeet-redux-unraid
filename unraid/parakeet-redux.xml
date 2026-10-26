@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Container version="2">
   <Name>Parakeet-Redux</Name>
-  <Repository>ghcr.io/agrestisdavid/parakeet-redux-unraid:0.1.0</Repository>
+  <Repository>ghcr.io/agrestisdavid/parakeet-redux-unraid:0.1.1</Repository>
   <Registry>https://github.com/agrestisdavid/parakeet-redux-unraid/pkgs/container/parakeet-redux-unraid</Registry>
   <Network>bridge</Network>
   <Privileged>false</Privileged>
